@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom mindflow components */
+@layer components {
+  .mindflow-card {
+    @apply bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm border border-slate-200 dark:border-slate-700 rounded-2xl shadow-lg transition-all duration-300;
+  }
+  
+  .mindflow-gradient-bg {
+    @apply bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900;
+  }
+  
+  .mindflow-text-primary {
+    @apply text-slate-800 dark:text-slate-100;
+  }
+  
+  .mindflow-text-secondary {
+    @apply text-slate-600 dark:text-slate-400;
+  }
+  
+  .mindflow-button-primary {
+    @apply bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105;
+  }
+}
+
+/* Mental Health Optimized Color Palette */
+@layer utilities {
+  /* Primary palette - calm and therapeutic */
+  .text-mindflow-blue { color: #5C67F2; }
+  .bg-mindflow-blue { background-color: #5C67F2; }
+  .text-mindflow-aqua { color: #00A89D; }
+  .bg-mindflow-aqua { background-color: #00A89D; }
+  .text-mindflow-lavender { color: #845EC2; }
+  .bg-mindflow-lavender { background-color: #845EC2; }
+  
+  /* Soft accent colors for mental health */
+  .text-therapy-peach { color: #FF9A8B; }
+  .bg-therapy-peach { background-color: #FF9A8B; }
+  .text-therapy-yellow { color: #FFC75F; }
+  .bg-therapy-yellow { background-color: #FFC75F; }
+  .text-therapy-coral { color: #FF6F61; }
+  .bg-therapy-coral { background-color: #FF6F61; }
+  
+  /* Background variations for different moods */
+  .bg-wellness-soft { background-color: #f6f8fc; }
+  .bg-wellness-warm { background-color: #fffaf3; }
+  .bg-wellness-mint { background-color: #f2f7f5; }
+  
+  /* Extended semantic colors for mental health states */
+  .text-mood-happy { color: #FFD93D; }
+  .bg-mood-happy { background-color: #FFD93D; }
+  .text-mood-calm { color: #6BCF7F; }
+  .bg-mood-calm { background-color: #6BCF7F; }
+  .text-mood-neutral { color: #A8A8A8; }
+  .bg-mood-neutral { background-color: #A8A8A8; }
+  .text-mood-sad { color: #6FA8DC; }
+  .bg-mood-sad { background-color: #6FA8DC; }
+  .text-mood-anxious { color: #FFB347; }
+  .bg-mood-anxious { background-color: #FFB347; }
+  .text-mood-angry { color: #FF6B6B; }
+  .bg-mood-angry { background-color: #FF6B6B; }
+  
+  /* Therapeutic spacing */
+  .p-therapy { padding: 1.5rem; }
+  .m-therapy { margin: 1.5rem; }
+  .p-calm { padding: 2rem; }
+  .m-calm { margin: 2rem; }
+  .p-serene { padding: 3rem; }
+  .m-serene { margin: 3rem; }
+  
+  /* Soft, organic shapes for mental health */
+  .rounded-therapy { border-radius: 12px; }
+  .rounded-calm { border-radius: 16px; }
+  .rounded-serene { border-radius: 24px; }
+}
+
+/* Gentle, therapeutic animations */
+@layer utilities {
+  .animate-breathe {
+    animation: breathe 3s ease-in-out infinite;
+  }
+  
+  .animate-fade-up {
+    animation: fade-up 0.3s ease-out;
+  }
+  
+  .animate-gentle-pulse {
+    animation: gentle-pulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+@keyframes fade-up {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .mindflow-card {
+    @apply rounded-xl;
+  }
+}
+
+/* Mental Health Focused Typography */
+@layer utilities {
+  .font-therapy-sm { font-size: 14px; line-height: 1.6; }
+  .font-therapy-base { font-size: 16px; line-height: 1.7; }
+  .font-therapy-lg { font-size: 18px; line-height: 1.7; }
+  .font-therapy-xl { font-size: 20px; line-height: 1.6; }
+  .font-therapy-2xl { font-size: 24px; line-height: 1.5; }
+  .font-therapy-3xl { font-size: 28px; line-height: 1.4; }
+  .font-therapy-4xl { font-size: 32px; line-height: 1.3; }
+}
+
