@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.env.*
+*.sqlite3
+*.db
+# VSCode
+.vscode/
+# macOS
+.DS_Store
+# Node
+node_modules/
+yarn.lock
+npm-debug.log*
+# Build
+/dist/
+/build/
+/frontend/public/output.css
+# Logs
+*.log
+# OS
+Thumbs.db
+# Others
+*.swp
+*.swo
+# Frontend
+frontend/node_modules/
+frontend/.pnp*
+frontend/.env
+frontend/dist/
+frontend/.next/
+frontend/.cache/
+frontend/public/output.css 
